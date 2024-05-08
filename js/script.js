@@ -9,7 +9,7 @@
 const userKm = prompt ('Inserisci i km da percorrere');
 const userAge = prompt ('Inserisci la tua età');
 let price = (userKm * 0.276);
-price.toFixed(2)
+let total = price.toFixed(2)
 
 if (userAge < 18){ 
     document.getElementById('output').innerHTML = (price) - (price /100) *21
