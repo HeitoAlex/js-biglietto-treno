@@ -9,14 +9,14 @@
 const userKm = prompt ('Inserisci i km da percorrere');
 const userAge = prompt ('Inserisci la tua età');
 let price = (userKm * 0.276);
-let total = price.toFixed(2)
+let total = price.toFixed(2);
 
 if (userAge < 18){ 
-    document.getElementById('output').innerHTML = (price) - (price /100) *21
+    document.getElementById('output').innerHTML = (total) - math.round ((price /100) *21)
 } else if (userAge >= 65){
-    document.getElementById('output').innerHTML = (price) - (price /100) *42
+    document.getElementById('output').innerHTML = (total) - math.round ((price /100) *42) 
 } else {
-    document.getElementById('output').innerHTML = (price)
+    document.getElementById('output').innerHTML = (total)
 }
 
 
