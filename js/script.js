@@ -9,15 +9,31 @@
 const userKm = prompt ('Inserisci i km da percorrere');
 const userAge = prompt ('Inserisci la tua età');
 let price = (userKm * 0.276);
-let total = price.toFixed(2);
+let prezzoOutput;
 
 if (userAge < 18){ 
-    document.getElementById('output').innerHTML = (total) - math.round ((price /100) *21)
+    document.getElementById('output').innerHTML =  ( (price) -  ((price /100) *21) ).toFixed(2);
 } else if (userAge >= 65){
-    document.getElementById('output').innerHTML = (total) - math.round ((price /100) *42) 
+    document.getElementById('output').innerHTML =  ( (price) -  ((price /100) *42) ).toFixed(2);
 } else {
-    document.getElementById('output').innerHTML = (total)
+    document.getElementById('output').innerHTML = price.toFixed(2);
 }
 
 
 
+// const userDistance = Number.parseFloat(prompt('inserisci la distanza in km'), 10);
+// const userAge = Number.parseInt(prompt('inserisci età passeggero'), 10);
+
+// const prezzoAlKm = 0.276;
+// let sconto = 0;
+
+// if (userAge >= 65){
+//     sconto = 42;
+// } else if (userAge){
+//     sconto = 21;
+// }
+
+// let prezzo = prezzoAlKm * userDistance;
+// prezzo - prezzo - ((prezzo /100) + sconto)
+
+// console.log(prezzo.toFixed(2))
